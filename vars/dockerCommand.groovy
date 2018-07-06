@@ -1,7 +1,7 @@
 def call(args) {
-      //assert args != null
-      echo "Args value: ${args}"
+      assert args != null
       echo "inside dockerCommand(args) method"
-      //sh "docker ${args}"
-      return sh(script: "docker ${args}", returnStdout: true)
+      echo "Args value: ${args}"
+      sh "docker ${args}"
+      //return sh(script: "docker ${args}", returnStdout: true)
   }
